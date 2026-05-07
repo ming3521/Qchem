@@ -1,0 +1,4 @@
+# Optional dependencies for running notebooks and plotting examples.
+-r requirements.txt
+jupyter
+matplotlib

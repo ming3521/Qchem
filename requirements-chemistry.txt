@@ -1,0 +1,6 @@
+# Chemistry utilities for molecular Hamiltonian generation.
+-r requirements.txt
+openfermion
+openfermionpsi4
+# Psi4 may require a separate conda/system installation on some platforms.
+# Add 'psi4' here only if it is installable in your target environment.

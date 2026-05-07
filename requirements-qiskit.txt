@@ -1,0 +1,4 @@
+# Qiskit backend: sampling, circuit conversion, transpilation, QASM and drawing.
+-r requirements.txt
+qiskit
+qiskit-aer

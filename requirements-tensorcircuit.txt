@@ -1,0 +1,3 @@
+# TensorCircuit backend: sampling and PyTorch-based differentiable statevector simulation.
+-r requirements.txt
+tensorcircuit

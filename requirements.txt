@@ -1,0 +1,5 @@
+# Core dependencies used by the circuit abstraction and solver layer.
+# Install one backend-specific requirements file as well.
+numpy
+torch
+scipy
