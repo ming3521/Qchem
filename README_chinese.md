@@ -214,3 +214,14 @@ terms, n_qubits, n_electrons = ham.get_processed_hamiltonian(
 ```
 
 
+
+| 后端            | 采样 `run_sampling` | 状态向量 `get_statevector` |         是否支持自动微分 |             是否原生执行 HYQ gate | 评价                        |
+| ------------- | ----------------: | ---------------------: | ---------------: | --------------------------: | ------------------------- |
+| Qiskit        |                支持 |                     支持 | 不支持 PyTorch 自动微分 |            通过 `to_qiskit()` | 老后端，适合画图/采样/数值态矢          |
+| PennyLane     |                支持 |                     支持 |    支持 PyTorch 接口 |                 手写 gate map | 老后端，适合可微分，但 gate 覆盖有限     |
+| TensorCircuit |                支持 |                     支持 |       支持 PyTorch | 手写 gate map + fallback 小写方法 | 老后端，适合 VarQITE/VQE 梯度     |
+| Cirq          |                支持 |                     支持 | 不支持 PyTorch 自动微分 |     多数门原生，失败 fallback dense | 新增，可用但有一个 sampling 潜在 bug |
+| Qulacs        |                支持 |                     支持 | 不支持 PyTorch 自动微分 |          用 DenseMatrix 统一执行 | 新增，整体最稳                   |
+| Qutip         |                支持 |                     支持 | 不支持 PyTorch 自动微分 |  实际用 shared dense simulator | 新增，更像 QuTiP 入口包装          |
+
+
